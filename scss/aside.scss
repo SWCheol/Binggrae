@@ -1,0 +1,40 @@
+aside {
+    display: none;
+    position: fixed;
+
+    span {
+        bottom: 80px;
+        right: 10px;
+
+        a {
+            display: block;
+            width: 55px;
+            height: 55px;
+            font-size: 14px;
+            border-radius: 50%;
+            z-index: 5;
+            top: 50%;
+            left: 50%;
+
+        }
+
+        &:first-child {
+            a {
+                color: black;
+                background: white;
+                box-shadow: 1px 1px 1px;
+            }
+        }
+
+        &:last-child {
+            a {
+                color: white;
+                background-color: black;
+            }
+        }
+    }
+
+    @media screen and (max-width:1024px) {
+        display: none;
+    }
+}

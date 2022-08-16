@@ -1,0 +1,410 @@
+header {
+    position: fixed;
+    width: 100%;
+    transition: 1s padding-bottom;
+
+    &.white {
+        background-color: white;
+        border-bottom: 1px solid #e4eef2;
+    }
+
+    &.dropDown {
+        padding-bottom: 450px;
+        border-radius: 0 0 40px 40px;
+        box-shadow: 1px 1px 5px;
+    }
+
+    div {
+        &.inner {
+            padding: 40px 80px;
+            margin-top: 31px;
+
+            @media screen and (max-width: 1700px) {
+                padding: 40px 20px;
+            }
+
+            @media screen and (max-width: 1024px) {
+                margin-top: 0;
+            }
+
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                font-size: 0;
+                line-height: 0;
+                a {
+                    img {
+                        &.mobile {
+                            display: none;
+                        }
+
+                        @media screen and (max-width: 1024px) {
+                            &.pc {
+                                display: none;
+                            }
+
+                            &.mobile {
+                                display: block;
+                                width: 117px;
+                                height: 27px;
+                            }
+                        }
+                    }
+                }    
+            }
+
+            ul {
+                // gnb 탑메뉴
+                &.gnb {
+                    font-size: 20px;
+                    display: flex;
+                    transform: translateX(-30px);
+                    transition: 0.5s all;
+
+                    @media screen and (max-width: 1700px) {
+                        font-size: 16px;
+                    }
+
+                    @media screen and (max-width: 1280px) {
+                        transform: translateX(20px);
+                    }
+
+                    @media screen and (max-width: 1024px) {
+                        display: none;
+                    }
+
+                    li {
+                        h2 {                            
+                            a {
+                                padding: 40px 80px 40px 0;
+                                transition: 0.5s all;
+                                position: relative;
+
+                                &:hover {
+                                    color: red;
+
+                                    &::before {
+                                        content: "";
+                                        display: block;
+                                        width: 5px;
+                                        height: 5px;
+                                        border-radius: 50%;
+                                        background: red;
+                                        position: absolute;
+                                        top: 40px;
+                                        right: 70px; /* 오른쪽 padding 제거 */
+                                    }
+
+                                    &::after {
+                                        content: "";
+                                        display: block;
+                                        width: calc(100% - 80px); /* 100% - padding, 왼쪽 padding 제거 */
+                                        height: 2px;
+                                        background: red;
+                                        position: absolute;
+                                        top: 107px; /* 총 높이 107 */
+                                        right: 80px; /* 오른쪽 padding 제거 */
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    ul {
+                        &.gnbsub {
+                            display: none;
+                            flex-direction: column;
+                            position: absolute;
+                            top: 115px;
+                            opacity: 0;
+
+                            li {
+                                padding: 10px 0;
+
+                                &.ham {
+                                    display: none;
+                                    font-size: 15px;
+                                    color: #343434;
+                                }
+
+                                a {
+                                    display: block;
+                                    width: 100%;
+                                    transition: 0.5s all;
+
+                                    &:hover {
+                                        color: red;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.opacity {
+                            animation: opacity 0.5s 0.5s forwards;
+                            @keyframes opacity {
+                                from {
+                                    opacity: 0;
+                                }
+                                to {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.enb {
+                    letter-spacing: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+
+                    li {
+                        ul {
+                            &.lang {
+                                font-weight: bold;
+
+                                li {
+                                    &.langChoice {
+                                        cursor: pointer;
+                                        transition: 1s all;
+                                        padding-right: 20px;
+
+                                        &::after {
+                                            content: "";
+                                            display: block;
+                                            width: 10px;
+                                            height: 5px;
+                                            background: url(../img/lang_btn.png) no-repeat;
+                                            background-size: cover;
+                                            transform: translate(30px, -9px);
+                                        }
+                                    }
+                                }
+
+                                ul {
+                                    transition: 1s all;
+
+                                    &.langLink {
+                                        background: white;
+                                        text-align: center;
+                                        position: absolute;
+                                        border-radius: 20px;
+                                        overflow: hidden; 
+                                        height: 0;
+                                        padding: 0;
+                                        transition: 0.5s all;
+                                        cursor: pointer;
+
+                                        li {
+                                            a {
+                                                display: block;
+                                                padding: 7px 15px;
+
+                                                @media screen and (max-width: 1024px) {
+                                                    padding: 3px 15px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.active {
+                                        height: 90px;
+                                        padding: 10px 0;
+
+                                        @media screen and (max-width: 1024px) {
+                                            height: 70px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            div {
+                                &.hamburger {
+                                    font-size: 0;
+                                    line-height: 0;
+                                    cursor: pointer;
+
+                                    span {
+                                        display: block;
+                                        width: 26px;
+                                        height: 2px;
+                                        background: black;
+                                        margin-top: 5px;
+                                        margin-bottom: 8px;
+                                        transition: 0.5s all;
+
+                                        @media screen and (max-width: 1024px) {
+                                            margin-bottom: 5px;                     
+                                        }
+
+                                    }
+                                }
+
+                                &.active {
+                                    span {
+                                        &:first-child {
+                                            transform: translateY(10px) rotate(-45deg);
+
+                                            @media screen and (max-width: 1024px) {
+                                                transform: translateY(7px) rotate(-45deg);
+                                            }
+
+                                        }
+
+                                        &:nth-child(2) {
+                                            transform: rotate(45deg);
+
+                                            @media screen and (max-width: 1024px) {
+                                            }
+                                        }
+
+                                        &:last-child {
+                                            transform: rotate(45deg);
+                                            opacity: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.tnb {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 30px;
+                    border-bottom: 1px solid #e4eef2;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    @media screen and (max-width: 1024px) {
+                        display: none;
+                    }
+
+                    li {
+                        font-size: 14px;
+                        transform: translate(-80px, 5px);
+                        a {
+                            span {
+                                &.img {
+                                    img {
+                                        transform: translateY(3px);
+                                    }
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            margin-right: 20px;
+
+                            &::after {
+                                content: "";
+                                display: block;
+                                width: 1px;
+                                height: 10px;
+                                background: #e4eef2;
+                                transform: translate(112px, -10px);
+                                /*
+                                    (first-child의 width = 101) + (margin-right / 2 = 10) + (두께 width 1px) = 112 만큼 x축 이동
+                                    after의 height 10 만큼 y축 - 이동
+                                */
+                            }
+                        }
+                    }
+                }
+
+                &.lnb {
+                    display: none;
+                    justify-content: space-evenly;
+                    li {
+                        ul {
+                            &.lang {
+                                display: flex;
+                                justify-content: space-evenly;
+                                gap: 20px;
+                                li {
+                                    a {
+                                        &:last-child {
+                                            color: #707070;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            a {
+                                color: #343434;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // gnb 햄버거 메뉴
+    &.hamburger {
+        height: 100vh;
+        background: url(../img/pc_ham_bg.png) no-repeat white;
+        background-size: cover;
+
+        div {
+            &.inner {
+                ul {
+                    &.gnb {
+                        
+                        li {
+                            h2 {
+                                a {
+                                    &:hover {
+                                        &::before {
+                                            display: none;
+                                        }
+
+                                        &::after {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.gnbsub {
+                                li {
+                                    .ham {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // gnb 모바일 메뉴
+    &.mobile {
+        div {
+            &.inner {
+                ul {
+                    &.gnb {
+                        display: none;
+                    }
+
+                    &.lnb {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
