@@ -1,18 +1,20 @@
-// .inner {
-//     width: 95%;
-//     margin: 0 auto;
-// }
-
 body {
-    letter-spacing: -2px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -1px;
+
     min-height: 3000px;
     background-color: green;
-    cursor: url(../img/ico_favicon.ico) 0 0,auto;
 
     *::selection {
         color: white;
-        background: black;
+        background: black; 
     }
+}
+
+.inner {
+    width: 95%;
+    max-width: 1310px;
+    margin: 0 auto;
 }
 
 a {

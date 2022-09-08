@@ -1,8 +1,10 @@
 aside {
     display: none;
-    position: fixed;
+    position: absolute;
+    letter-spacing: 0;
 
     span {
+        position: fixed;
         bottom: 80px;
         right: 10px;
 
@@ -10,26 +12,24 @@ aside {
             display: block;
             width: 55px;
             height: 55px;
+            margin-bottom: 5px;
             font-size: 14px;
+            text-align: center;
+            line-height: 50px;
             border-radius: 50%;
+            position: relative;
             z-index: 5;
-            top: 50%;
-            left: 50%;
 
-        }
-
-        &:first-child {
-            a {
+            &:first-child {
                 color: black;
                 background: white;
                 box-shadow: 1px 1px 1px;
             }
-        }
 
-        &:last-child {
-            a {
-                color: white;
-                background-color: black;
+            &:last-child {
+                    color: white;
+                    background: black;
+                    font-size: 22px;
             }
         }
     }
