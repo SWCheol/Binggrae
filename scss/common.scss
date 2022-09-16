@@ -9,6 +9,10 @@ body {
         color: white;
         background: black; 
     }
+
+    &.hamburger {
+        overflow-y: hidden;
+    }
 }
 
 .inner {
@@ -17,7 +21,19 @@ body {
     margin: 0 auto;
 }
 
+ul {
+	font-size: 0;
+}
+
+li {
+    font-size: 16px;
+}
+
 a {
     color: black;
     text-decoration: none;
+}
+
+.hideText {
+    display: none;
 }

@@ -1,22 +1,53 @@
-// // browser width check for responsive web
-// let browserWidth = () => {
-//     body.removeAttribute('class');
-//     innerWidth > 1024 ? 
-//     header.classList.add('pc') :
-//     innerWidth > 768 ?
-//         header.classList.add('tablet') :
-//         header.classList.add('mobile'); 
-// }
+// browser width check for responsive web
+let browserWidth = () => {
+}
 
-// let body = document.querySelector('body');
-// let header = document.getElementById('header');
-// const scrollWidth = body.clientWidth;
-// // 햄버거 메뉴 누를 때 스크롤 가로 크기만큼 패딩 넣기
+window.addEventListener('DOMContentLoaded', function() {
+    browserWidth();
+});
 
-// window.addEventListener('DOMContentLoaded', () => {
-//     browserWidth();
-// });
+window.addEventListener('resize', function() {
+    browserWidth();
+});
 
-// window.addEventListener('resize', () => {
-//     browserWidth();
-// });
+
+// header scroll event
+window.addEventListener('scroll', function() {
+    if(scrollY > 10) {
+        header.classList.add('white');
+    } else {
+        header.classList.remove('white');
+    }
+});
+
+
+// gnb mouseevent
+let gnb = document.querySelector('.gnb');
+
+gnb.addEventListener('mouseover', function() {
+    header.classList.add('white');
+    header.classList.add('active');
+    header.addEventListener('mouseleave', () => {
+        if(scrollY < 10) {
+            header.classList.remove('white');
+        }
+        header.classList.remove('active');
+    });
+});
+
+
+// tnb language menu
+let langChoice = document.querySelector('.choice');
+let language = document.querySelector('.language')
+langChoice.addEventListener('click', function() {
+    language.classList.toggle('active');
+});
+
+
+// tnb hamburger menu
+let hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    gnb.classList.toggle('hamburger');
+});

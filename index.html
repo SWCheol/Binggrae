@@ -31,11 +31,12 @@
     <header id="header">
             <h1 class="h1">
                 <a href="#">
-                    <span>회사소개</span>
+                    <span class="hideText">회사소개</span>
                     <img class="pcLogo" src="img/logo-pc.png" alt="빙그레 pc로고">
                     <img class="mobileLogo" src="img/logo_mo.png" alt="빙그레 모바일 로고">
                 </a>
             </h1>
+
             <div class="gnbWrap">
                 <ul class="gnb">
                     <li class="depth01">
@@ -69,8 +70,8 @@
                             <li><a href="#">Shared Value</a></li>
                             <li><a href="#">Global Integrity</a></li>
                             <li class="depth03">
-                                <ul>
-                                    <a href="#">윤리준법경영</a>
+                                <a href="#">윤리준법경영</a>
+                                <ul class="depth03Ham">
                                     <li><a href="#">윤리강령</a></li>
                                     <li><a href="#">공정거리자율준수</a></li>
                                 </ul>
@@ -92,7 +93,7 @@
                     <li class="depth01">
                         <a href="#">뉴스룸</a>
                         <ul class="depth02">
-                            <li class="depth03"><a href="#">전체보기</a></li>
+                            <li class="depth03 depth03Ham"><a href="#">전체보기</a></li>
                             <li><a href="#">새소식</a></li>
                             <li><a href="#">보도자료</a></li>
                             <li><a href="#">빙그레 스토리</a></li>
@@ -104,8 +105,10 @@
                         <ul class="depth02">
                             <li class="depth03">
                                 <a href="#">고객상담</a>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">1:1 이메일상담</a></li>
+                                <ul class="depth03Ham">
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">1:1 이메일상담</a></li>
+                                </ul>
                             </li>
                             <li><a href="#">사이버 부정신고</a></li>
                             <li><a href="#">안전신문고</a></li>
@@ -117,9 +120,9 @@
 
             <ul class="enb">
                 <li>
-                    <ul class="depth01">
+                    <ul>
                         <li class="choice">KR<img src="img/lang_btn.png" alt="언어 드롭다운 버튼"></li>
-                        <ul class="depth02">
+                        <ul class="language">
                             <li><a href="#">KR</a></li>
                             <li><a href="#">EN</a></li>
                             <li><a href="#">CN</a></li>
@@ -128,19 +131,21 @@
                 </li>
                 <li>
                     <div class="hamburger">
-                        전체메뉴보기
+                        <span class="hideText">전체메뉴보기</span>
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
                 </li>
             </ul>
+
             <div class="tnb">
                 <ul>
-                    <li><a href="#">구매포털시스템<img src="img/link_arrow02.png" alt=""></a></li>
-                    <li><a href="#">인재채용<img src="img/link_arrow02.png" alt=""></a></li>
+                    <li><a href="#">구매포털시스템<img src="img/link_arrow02.png" alt="구매포털시스템"></a></li>
+                    <li><a href="#">인재채용<img src="img/link_arrow02.png" alt="인재채용"></a></li>
                 </ul>
             </div>
+
             <ul class="mnb">
                 <li>
                     <ul class="lang">

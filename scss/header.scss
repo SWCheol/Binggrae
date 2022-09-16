@@ -1,17 +1,43 @@
+@import "headerMobile.scss";
+
 #header {
     width: 100%;
-    padding: 40px 80px 0;
+    padding: 40px 80px;
     margin-top: 31px;
     box-sizing: border-box;
-    position: relative;
+    position: fixed;
+
+    &::after {
+        width: 100%;
+        height: 1px;
+        background: #e7e7e7;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        clear: both;
+    }
+
+    &.white {
+        background: #fff;
+
+        &::after {
+            content: "";
+        }
+
+        .tnb {
+            background: #fff;
+        }
+    }
 
     h1 {
-        display: inline-block;
+        float: left;
+        position: relative;
+        z-index: 10;
 
         a {
-            display: block;
-            font-size: 0;
-            overflow: hidden;
+            span {
+                display: none;
+            }
 
             .mobileLogo {
                 display: none;
@@ -21,108 +47,155 @@
         }
     }
 
-    .gnb {
-        display: inline-block;
-        font-size: 0;
+    .gnbWrap {
+        height: 0px;
         position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%);
+        top: -31px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
 
-        .depth01 {
+        .gnb {
             display: inline-block;
-            padding-top: 45px;
-            padding-right: 80px;
             position: relative;
-            transition: 0.5s;
+            top: 28px;
 
+            .depth01 {
+                display: inline-block;
+                padding-top: 45px;
+                padding-right: 80px;
 
-            &:hover {
-                .depth02 {
+                > a {
                     display: block;
-                }
-            }
+                    line-height: 30px;
+                    font-size: 20px;
+                    padding-bottom: 40px;
+                    transition: 0.5s color;
 
-            a {
-                font-size: 20px;
-                line-height: 30px;
-                padding-bottom: 40px;
-                transition: 0.5s;
-            } 
-
-            .depth02 {
-                display: none;
-                position: absolute;
-                top: 0;
-
-                li {
-                    a {
-
+                    &:hover {
+                        color: red;
                     }
                 }
-            }
-        }
 
-        .depth03 {
-            padding-top: 15px;
+                .depth02 {
+                    display: none;
+                    padding-top: 20px;
+                    position: absolute;
+                    top: 116px;
 
-            li {
-                display: none;
+                    > li {
+                        > a {
+                            display: block;
+                            text-align: left;
+                            font-size: 18px;
+                            line-height: 27px;
+                            padding: 7px 0;
+                            white-space: nowrap;
+                            transition: 0.5s;
 
-                a {
-                    color: #343434;
-                    font-size: 15px;
+                            &:hover {
+                                color: red;
+                            }
+                        }
+                    }
+
+                    .depth03Ham {
+                        display: none;
+                    }
                 }
             }
         }
     }
 
     .enb {
-        font-size: 0;
-        float: right;
+        position: absolute;
+        right: 80px;
+        z-index: 10;
 
-        li {
+        > li {
             display: inline-block;
-            font-size: 16px;
+            line-height: 36px;
+            width: 40px;
 
-            .depth01 {
+            &:first-child {
+                margin-right: 34px;
+            }
+
+            > ul {
                 font-weight: bold;
-                line-height: 30px;
-                position: relative;
 
                 .choice {
                     cursor: pointer;
-                    line-height: 30px;
 
-                    img {
-                        margin-left: 10px;
+                    > img {
                         position: relative;
                         top: -3px;
+                        margin-left: 10px;
                     }
                 }
 
-                .depth02 {
-                    display: none;
+                .language {
+                    width: 52px;
+                    height: 0;
+                    background: #fff;
+                    text-align: center;
+                    font-weight: bold;
+                    border-radius: 20px;
+                    position: absolute;
+                    overflow: hidden;
+                    transition: 0.5s;
+
+                    > li {
+                        a {
+                            display: block;
+                            line-height: 30px;
+                        }
+                    }
+
+                    &.active {
+                        height: 90px;
+                        padding: 10px 0;
+                    }
                 }
             }
 
             &:last-child {
-                margin-left: 35px;
+                width: 26px;
             }
 
             .hamburger {
-                font-size: 0;
-                overflow: hidden;
+                position: relative;
+                top: 4px;
                 cursor: pointer;
-                
-                div {
-                    width: 26px;
+
+                > div {
                     height: 2px;
                     background: #000;
-                    margin: 6.5px 0;
+                    transition: 0.5s;
+
 
                     &:nth-of-type(2) {
                         margin: 8px 0;
+                    }
+                }
+
+                &.active {
+
+                    > div {
+                        &:nth-of-type(1) {
+                            transform: translateY(10px) rotate(-45deg);
+                        }
+
+                        &:nth-of-type(2) {
+                            transform: rotate(45deg);
+                        }
+
+                        &:nth-of-type(3) {
+                            transform: rotate(45deg);
+                            opacity: 0;
+                        }
                     }
                 }
             }
@@ -130,17 +203,16 @@
     }
 
     .tnb {
-        width: 100%;
         position: absolute;
         top: -31px;
         left: 0;
-
-        ul {
-            float: right;
-            margin-right: 80px;
-            font-size: 0;
-
-            li {
+        right: 0;
+        border-bottom: 1px solid #e7e7e7;
+        padding: 0 80px;
+        text-align: right;
+        
+        > ul {
+            > li {
                 display: inline-block;
                 position: relative;
 
@@ -154,8 +226,8 @@
                         height: 10px;
                         background: #e7e7e7;
                         position: absolute;
-                        top: 10px;
-                        right: -10px;
+                        top: 11px;
+                        right: -12px;
                     }
                 }
 
@@ -163,23 +235,14 @@
                     display: block;
                     font-size: 14px;
                     line-height: 30px;
-                    
+
                     img {
-                        margin-left: 5px;
                         position: relative;
-                        top: 2px;
+                        top: 1px;
+                        margin-left: 5px;
                     }
                 }
             }
-        }
-
-        &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 1px;
-            background: #e7e7e7;
-            clear: both;
         }
     }
 
@@ -187,53 +250,21 @@
         display: none;
     }
 
-    @media screen and (max-width: 1700px) {
-        padding: 40px 20px;
+    &.active {
 
-        .gnb {
-
-            .depth01 {
-                padding-right: 50px;
-        
-                a {
-                    font-size: 16px;
-                }
-            }
-        }
-    }
-
-    // tablet
-    @media screen and (max-width: 1024px) {
-        position: relative;
-
-        h1 {
-            a {
-                .pcLogo {
-                    display: none;
-                }
-
-                .mobileLogo {
-                    display: block;
-                }
-            }
+        &::after {
+            content: "";
         }
 
-        .tnb {
-            ul {
-                li {
-                    &:first-child {
-                        &::after {
-                            display: none;
-                        }
+        .gnbWrap {
+
+            .gnb {
+                .depth01 {
+                    .depth02 {
+                        display: block;
                     }
                 }
             }
         }
-    }
-
-    // mobile
-    @media screen and (max-width: 768px) {
-        padding: 22px 20px;
-        margin-top: 0;
     }
 }

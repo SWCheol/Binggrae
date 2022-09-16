@@ -51,6 +51,7 @@ table {
 body {
   font-family: "Noto Sans KR", sans-serif;
   letter-spacing: -1px;
+  overflow-x: hidden;
   min-height: 3000px;
   background-color: green;
 }
@@ -62,6 +63,10 @@ body *::selection {
   color: white;
   background: black;
 }
+body.hamburger {
+  overflow-y: hidden;
+  margin-right: 17px;
+}
 
 .inner {
   width: 95%;
@@ -69,9 +74,25 @@ body *::selection {
   margin: 0 auto;
 }
 
+ul {
+  font-size: 0;
+}
+
+li {
+  font-size: 16px;
+}
+
 a {
   color: black;
   text-decoration: none;
+}
+
+.hideText {
+  display: none;
+}
+
+.commonBaby {
+  background: #000;
 }
 
 #header {
@@ -79,10 +100,12 @@ a {
   padding: 40px 80px;
   margin-top: 31px;
   box-sizing: border-box;
-  position: relative;
+  position: fixed;
+  top: 0;
 }
 #header h1 {
   display: inline-block;
+  position: relative;
 }
 #header h1 a span {
   display: none;
@@ -92,166 +115,53 @@ a {
   width: 117px;
   height: 27px;
 }
-#header .gnb {
-  display: inline-block;
-  font-size: 0;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
+#header .gnbWrap {
+  width: 100vw;
+  height: 0px;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
 }
-#header .gnb .depth01 {
+#header .gnbWrap .gnb .depth01 {
   display: inline-block;
   padding-top: 45px;
   padding-right: 80px;
-  position: relative;
-  transition: 0.5s;
 }
-#header .gnb .depth01:hover .depth02 {
-  display: block;
-}
-#header .gnb .depth01 a {
-  font-size: 20px;
-  line-height: 30px;
+#header .gnbWrap .gnb .depth01 > a {
   padding-bottom: 40px;
-  transition: 0.5s;
 }
-#header .gnb .depth01 .depth02 {
+#header .gnbWrap .gnb .depth01 .depth02 {
   display: none;
-  position: absolute;
-  top: 136px;
-}
-#header .gnb .depth03 {
-  padding-top: 15px;
-}
-#header .gnb .depth03 li {
-  display: none;
-}
-#header .gnb .depth03 li a {
-  color: #343434;
-  font-size: 15px;
-}
-#header .enb {
-  font-size: 0;
-  float: right;
-}
-#header .enb li {
-  display: inline-block;
-  font-size: 16px;
-}
-#header .enb li .depth01 {
-  font-weight: bold;
-  line-height: 30px;
-  position: relative;
-}
-#header .enb li .depth01 .choice {
-  cursor: pointer;
-  line-height: 30px;
-}
-#header .enb li .depth01 .choice img {
-  margin-left: 10px;
-  position: relative;
-  top: -3px;
-}
-#header .enb li .depth01 .depth02 {
-  display: none;
-}
-#header .enb li:last-child {
-  margin-left: 35px;
-}
-#header .enb li .hamburger {
-  font-size: 0;
-  overflow: hidden;
-  cursor: pointer;
-}
-#header .enb li .hamburger div {
-  width: 26px;
-  height: 2px;
-  background: #000;
-  margin: 6.5px 0;
-}
-#header .enb li .hamburger div:nth-of-type(2) {
-  margin: 8px 0;
 }
 #header .tnb {
-  width: 100%;
+  height: 30px;
   position: absolute;
   top: -31px;
   left: 0;
+  right: 0;
+  border: 2px solid red;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0 80px;
+  text-align: right;
 }
-#header .tnb ul {
-  float: right;
-  margin-right: 80px;
-  font-size: 0;
-}
-#header .tnb ul li {
+#header .tnb > ul > li {
   display: inline-block;
   position: relative;
 }
-#header .tnb ul li:first-child {
-  margin-right: 20px;
+#header .tnb > ul > li:first-child {
+  margin-right: 21px;
 }
-#header .tnb ul li:first-child::after {
+#header .tnb > ul > li a::after {
   content: "";
   display: block;
-  width: 1px;
-  height: 10px;
-  background: #e7e7e7;
+  width: 14px;
+  height: 14px;
   position: absolute;
-  top: 10px;
-  right: -10px;
-}
-#header .tnb ul li a {
-  display: block;
-  font-size: 14px;
-  line-height: 30px;
-}
-#header .tnb ul li a img {
-  margin-left: 5px;
-  position: relative;
-  top: 2px;
-}
-#header .tnb::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #e7e7e7;
-  clear: both;
+  top: 0;
+  right: 0;
+  background: url(../img/link_arrow02.png) no-repeat;
 }
 #header .mnb {
   display: none;
-}
-@media screen and (max-width: 1700px) {
-  #header {
-    padding: 40px 20px;
-  }
-  #header .gnb .depth01 {
-    padding-right: 50px;
-  }
-  #header .gnb .depth01 a {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  #header {
-    position: relative;
-  }
-  #header h1 a .pcLogo {
-    display: none;
-  }
-  #header h1 a .mobileLogo {
-    display: block;
-  }
-  #header .tnb ul li:first-child::after {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  #header {
-    padding: 22px 20px;
-    margin-top: 0;
-  }
 }
 
 /*

@@ -1,12 +1,36 @@
+.commonBaby {
+  background: #000;
+}
+
 #header {
   width: 100%;
   padding: 40px 80px;
   margin-top: 31px;
   box-sizing: border-box;
-  position: relative;
+  position: fixed;
+}
+#header::after {
+  width: 100%;
+  height: 1px;
+  background: #e7e7e7;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  clear: both;
+}
+#header.white {
+  background: #fff;
+}
+#header.white::after {
+  content: "";
+}
+#header.white .tnb {
+  background: #fff;
 }
 #header h1 {
-  display: inline-block;
+  float: left;
+  position: relative;
+  z-index: 10;
 }
 #header h1 a span {
   display: none;
@@ -17,198 +41,167 @@
   height: 27px;
 }
 #header .gnbWrap {
-  width: 100%;
-}
-#header .gnb {
-  display: inline-block;
+  height: 0px;
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 10;
-  font-size: 0;
+  top: -31px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
 }
-#header .gnb .depth01 {
+#header .gnbWrap .gnb {
   display: inline-block;
-  height: 75px;
+  position: relative;
+  top: 28px;
+}
+#header .gnbWrap .gnb .depth01 {
+  display: inline-block;
   padding-top: 45px;
   padding-right: 80px;
-  position: relative;
-  transition: 0.5s;
 }
-#header .gnb .depth01:hover > a {
+#header .gnbWrap .gnb .depth01 > a {
+  display: block;
+  line-height: 30px;
+  font-size: 20px;
+  padding-bottom: 40px;
+  transition: 0.5s color;
+}
+#header .gnbWrap .gnb .depth01 > a:hover {
   color: red;
 }
-#header .gnb .depth01:hover > a::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  background: red;
-  position: absolute;
-  top: 50px;
-  right: 70px;
-  border-radius: 50%;
-}
-#header .gnb .depth01:hover > a::after {
-  content: "";
-  width: calc(100% - 80px);
-  height: 2px;
-  background: red;
-  position: absolute;
-  left: 0;
-  bottom: 3px;
-}
-#header .gnb .depth01 a {
-  display: block;
-  font-size: 20px;
-  line-height: 30px;
-  padding-bottom: 40px;
-  transition: 0.5s;
-}
-#header .gnb .depth01 .depth02 {
+#header .gnbWrap .gnb .depth01 .depth02 {
   display: none;
-  width: 100%;
   padding-top: 20px;
   position: absolute;
   top: 116px;
 }
-#header .gnb .depth01 .depth02 li a {
-  width: 100%;
+#header .gnbWrap .gnb .depth01 .depth02 > li > a {
+  display: block;
+  text-align: left;
+  font-size: 18px;
+  line-height: 27px;
   padding: 7px 0;
-  word-break: keep-all;
+  white-space: nowrap;
   transition: 0.5s;
 }
-#header .gnb .depth01 .depth02 li a:hover {
+#header .gnbWrap .gnb .depth01 .depth02 > li > a:hover {
   color: red;
 }
-#header .gnb .depth03 {
+#header .gnbWrap .gnb .depth01 .depth02 .depth03Ham {
   display: none;
-  padding-top: 15px;
-}
-#header .gnb .depth03 li a {
-  color: #343434;
-  font-size: 15px;
 }
 #header .enb {
-  display: none;
-  font-size: 0;
-  float: right;
+  position: absolute;
+  right: 80px;
+  z-index: 10;
 }
-#header .enb li {
+#header .enb > li {
   display: inline-block;
-  font-size: 16px;
+  line-height: 36px;
+  width: 40px;
 }
-#header .enb li .depth01 {
+#header .enb > li:first-child {
+  margin-right: 34px;
+}
+#header .enb > li > ul {
   font-weight: bold;
-  line-height: 30px;
-  position: relative;
 }
-#header .enb li .depth01 .choice {
+#header .enb > li > ul .choice {
   cursor: pointer;
-  line-height: 30px;
 }
-#header .enb li .depth01 .choice img {
-  margin-left: 10px;
+#header .enb > li > ul .choice > img {
   position: relative;
   top: -3px;
+  margin-left: 10px;
 }
-#header .enb li .depth01 .depth02 {
-  display: none;
-}
-#header .enb li:last-child {
-  margin-left: 35px;
-}
-#header .enb li .hamburger {
-  font-size: 0;
+#header .enb > li > ul .language {
+  width: 52px;
+  height: 0;
+  background: #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 20px;
+  position: absolute;
   overflow: hidden;
+  transition: 0.5s;
+}
+#header .enb > li > ul .language > li a {
+  display: block;
+  line-height: 30px;
+}
+#header .enb > li > ul .language.active {
+  height: 90px;
+  padding: 10px 0;
+}
+#header .enb > li:last-child {
+  width: 26px;
+}
+#header .enb > li .hamburger {
+  position: relative;
+  top: 4px;
   cursor: pointer;
 }
-#header .enb li .hamburger div {
-  width: 26px;
+#header .enb > li .hamburger > div {
   height: 2px;
   background: #000;
-  margin: 6.5px 0;
+  transition: 0.5s;
 }
-#header .enb li .hamburger div:nth-of-type(2) {
+#header .enb > li .hamburger > div:nth-of-type(2) {
   margin: 8px 0;
 }
+#header .enb > li .hamburger.active > div:nth-of-type(1) {
+  transform: translateY(10px) rotate(-45deg);
+}
+#header .enb > li .hamburger.active > div:nth-of-type(2) {
+  transform: rotate(45deg);
+}
+#header .enb > li .hamburger.active > div:nth-of-type(3) {
+  transform: rotate(45deg);
+  opacity: 0;
+}
 #header .tnb {
-  width: 100%;
   position: absolute;
   top: -31px;
   left: 0;
+  right: 0;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0 80px;
+  text-align: right;
 }
-#header .tnb ul {
-  float: right;
-  margin-right: 80px;
-  font-size: 0;
-}
-#header .tnb ul li {
+#header .tnb > ul > li {
   display: inline-block;
   position: relative;
 }
-#header .tnb ul li:first-child {
+#header .tnb > ul > li:first-child {
   margin-right: 20px;
 }
-#header .tnb ul li:first-child::after {
+#header .tnb > ul > li:first-child::after {
   content: "";
   display: block;
   width: 1px;
   height: 10px;
   background: #e7e7e7;
   position: absolute;
-  top: 10px;
-  right: -10px;
+  top: 11px;
+  right: -12px;
 }
-#header .tnb ul li a {
+#header .tnb > ul > li a {
   display: block;
   font-size: 14px;
   line-height: 30px;
 }
-#header .tnb ul li a img {
-  margin-left: 5px;
+#header .tnb > ul > li a img {
   position: relative;
-  top: 2px;
-}
-#header .tnb::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #e7e7e7;
-  clear: both;
+  top: 1px;
+  margin-left: 5px;
 }
 #header .mnb {
   display: none;
 }
-#header.active {
-  background: #fff;
-  border-radius: 0 0 20px 20px;
-}
 #header.active::after {
   content: "";
+}
+#header.active .gnbWrap .gnb .depth01 .depth02 {
   display: block;
-  width: 100%;
-  height: 1px;
-  background: #e7e7e7;
-  position: absolute;
-  bottom: 0;
-}
-#header.active .gnb .depth02 {
-  display: block;
-}
-#header.active .tnb {
-  background: #fff;
-}
-
-@media screen and (max-width: 1700px) {
-  #header {
-    padding: 40px 20px;
-  }
-  #header .gnb .depth01 {
-    padding-right: 50px;
-  }
-  #header .gnb .depth01 a {
-    font-size: 16px;
-  }
 }
