@@ -1,12 +1,8 @@
 aside {
-  display: none;
-  position: absolute;
-  letter-spacing: 0;
-}
-aside span {
   position: fixed;
-  bottom: 80px;
   right: 10px;
+  bottom: 80px;
+  letter-spacing: 0;
 }
 aside span a {
   display: block;

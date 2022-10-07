@@ -1,9 +1,6 @@
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    letter-spacing: -1px;
-
-    min-height: 3000px;
-    background-color: green;
+    letter-spacing: -1.5px;
 
     *::selection {
         color: white;
@@ -11,7 +8,7 @@ body {
     }
 
     &.hamburger {
-        overflow-y: hidden;
+        overflow: hidden;
     }
 }
 
@@ -21,8 +18,12 @@ body {
     margin: 0 auto;
 }
 
-ul {
+ul, form {
 	font-size: 0;
+}
+
+input, button {
+    padding: 0;
 }
 
 li {
