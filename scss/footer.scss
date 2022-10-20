@@ -8,6 +8,8 @@ footer {
     }
 
     .inner {
+        width: 100%;
+        max-width: 100%;
         position: relative;
 
         .personal {
@@ -37,92 +39,115 @@ footer {
             }
             
             .address {
-                margin-top: 30px;
-                margin-bottom: 115px;
+                padding-top: 30px;
+                padding-bottom: 115px;
                 color: #a2a2a2;
                 font-size: 17px;
                 line-height: 2;
             }
         }
 
-        .link {
-            position: absolute;
-            right: 0;
+        .bottom1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            .sns {
-                display: inline-block;
-
-                > li {
-                    display: inline-block;
-
-                    > a {
-                        display: block;
-                        width: 70px;
-                        height: 70px;
-                        border-radius: 70px;
-                        background: #1b1b1b;
-                        box-shadow: 1px 3px 5px 0px #000;
-                        margin-left: 15px;
-                    }
-
-                    &:nth-of-type(1) { 
-                        > a {
-                            background: url(../img/footer_sns01.png) no-repeat center;
-                        }
-                    }
-                    &:nth-of-type(2) {
-                        > a {
-                            background: url(../img/footer_sns02.png) no-repeat center;
-                        }
-                    }
-                    &:nth-of-type(3) {
-                        > a {
-                            background: url(../img/footer_sns03.png) no-repeat center;
-                        }
-                    }
-                }
-            }
-
-            > a {
-                display: inline-block;
-                width: 355px;
-                vertical-align: top;
-                color: #6f6f6f;
-                padding-left: 100px;
+            .copyright {
+                color: #414141;
                 font-size: 14px;
-                line-height: 70px;
-                border-radius: 70px;
-                background: url(../img/flag_store.png) no-repeat 5%;
-                box-shadow: 1px 3px 5px 0px #000;
-                margin-left: 60px;
-
-                > strong {
-                    color: #b3b3b3;
-                    font-weight: bold;
+                letter-spacing: 0;
+            }
+    
+            .link {
+                .sns {
+                    display: inline-block;
+    
+                    > li {
+                        display: inline-block;
+    
+                        > a {
+                            display: block;
+                            width: 70px;
+                            height: 70px;
+                            border-radius: 70px;
+                            background: #1b1b1b;
+                            box-shadow: 1px 3px 5px 0px #000;
+                            margin-left: 15px;
+                        }
+    
+                        &:nth-of-type(1) { 
+                            > a {
+                                background: url(../img/footer_sns01.png) no-repeat center;
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            > a {
+                                background: url(../img/footer_sns02.png) no-repeat center;
+                            }
+                        }
+                        &:nth-of-type(3) {
+                            > a {
+                                background: url(../img/footer_sns03.png) no-repeat center;
+                            }
+                        }
+                    }
                 }
-
-                &::after {
-                    content: "▶";
-                    color: #fff;
-                    font-size: 10px;
-                    float: right;
-                    position: relative;
-                    right: 40px;
+    
+                > a {
+                    display: inline-block;
+                    width: 255px;
+                    vertical-align: top;
+                    color: #6f6f6f;
+                    padding-left: 100px;
+                    font-size: 14px;
+                    line-height: 70px;
+                    border-radius: 70px;
+                    background: url(../img/flag_store.png) no-repeat 5%;
+                    box-shadow: 1px 3px 5px 0px #000;
+                    margin-left: 60px;
+    
+                    > strong {
+                        color: #b3b3b3;
+                        font-weight: bold;
+                    }
+    
+                    &::after {
+                        content: "▶";
+                        color: #fff;
+                        font-size: 10px;
+                        float: right;
+                        position: relative;
+                        right: 40px;
+                    }
                 }
             }
         }
 
-        .copy {
+        .bottom2 {
+            display: none;
+            justify-content: space-between;
             line-height: 70px;
             letter-spacing: 0;
+            padding-top: 80px;
 
             .right {
-                display: none;
                 color: #767676;
                 font-size: 12px;
 
                 > span {
                     color: #767676;
+                    padding-left: 25px;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        width: 1px;
+                        height: 4px;
+                        background: #767676;
+                        position: absolute;
+                        top: 7px;
+                        left: 12px;
+                    }
                 }
             }
 

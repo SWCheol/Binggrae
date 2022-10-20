@@ -1,0 +1,405 @@
+#main {
+    @media screen and (max-width: 1400px) {
+        section {
+            &#community {
+                .inner {
+                    .question {
+                        .email {
+                            h3 {
+                                font-size: 28px;
+                            }
+
+                            > p {
+                                width: 155px;
+                                font-size: 14px;
+                                word-break: keep-all;
+                            }
+                        }
+
+                        .telephone {
+                            h3 {
+                                font-size: 28px;
+                            }
+
+                            > a {
+                                font-size: 38.5px;
+                            }
+                        }
+
+                        .faq {
+                            .qa {
+                                > li {
+                                    > a {
+                                        font-size: 16px;
+                                        line-height: 65px;
+
+                                        &::after {
+                                            width: 35px;
+                                            height: 35px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    
+                    .report {
+                        article {
+                            &.cyber {
+                                > p {
+                                    font-size: 16px;
+                                }
+                            }
+    
+                            &.sinmungo {
+                                > p {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        section {     
+            &#title {
+                .titleInnerWrap {
+                    .inner {
+                        .search {
+                            width: 90%;
+
+                            .searchBar {
+                                .searchForm {
+                                    > input {
+                                        width: 76%;
+                                        line-height: 60px;
+                                    }
+                                    
+                                    > button {
+                                        line-height: 45px;
+                                    }
+
+                                    &::before {
+                                        top: 21px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#community {
+                .inner {
+                    .question {
+                        .faq {
+                            .qa {
+                                > li {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        section {
+            &#community {
+                .inner {
+                    .question {
+                        .email {
+                            padding: 30px;
+                            background: url(../img/sec04_backimg01.png) no-repeat center right 10%;
+
+                            h3 {
+                                padding-bottom: 20px;
+                            }
+
+                            > p {
+                                line-height: 1.6;
+                                padding-bottom: 20px;
+                            }
+                        }
+
+                        .telephone {
+                            height: 260px;
+                            padding: 30px;
+                            background: url(../img/sec04_backimg02.png) no-repeat center right 10%;
+
+                            h3 {
+                                padding-bottom: 20px;
+                            }
+
+                            > a {
+                                padding-bottom: 15px;
+                            }
+                        }
+                    }
+                    .report {
+                        article {
+                            &.cyber {
+                                .btn1 {
+                                    margin: 50px auto 0;
+                                }
+                            }
+                            &.sinmungo {
+                                .btn1 {
+                                    margin: 50px auto 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        section {
+            padding-bottom: 60px;
+
+            &#title {
+                padding-bottom: 60px;
+
+                .titleInnerWrap {
+                    height: auto;
+
+                    .inner {
+                        > img {
+                            padding-top: 150px;
+                            padding-bottom: 10px;
+
+                            &.pcImg {
+                                display: none;
+                            }
+        
+                            &.mobileImg {
+                                display: block;
+                            }
+                        }
+
+                        .search {
+                            .searchBar {
+                                padding-left: 25px;
+
+                                .searchForm {
+                                    > input {
+                                        width: 60%;
+                                        font-size: 12px;
+                                        line-height: 45px;
+                                    }
+                                    
+                                    > button {
+                                        width: 18%;
+                                        font-size: 10px;
+                                        line-height: 30px;
+                                    }
+
+                                    &::before {
+                                        top: 15px;
+                                    }
+                                }
+                            }
+
+                            .hashtag {
+                                .hash {
+                                    > li {
+                                        margin-right: 7px;
+
+                                        > a {
+                                            width: 70px;
+                                            font-size: 10px;
+                                            line-height: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            &#taste {
+                .inner {
+                    h2 {
+                        font-size: 22px;
+                    }
+
+                    .tasteSlideWrap {
+                        .tasteSlide {
+                            white-space: initial;
+
+                            .list {
+                                right: 0;
+
+                                > li {
+                                    width: calc(100% / 3);
+                                    margin-top: 10px;
+
+                                    &:hover {
+                                        transform: translate(0);
+
+                                        > a {
+                                            .imgName {
+                                                background: #fff;
+
+                                                .normal {
+                                                    display: block;
+                                                }
+
+                                                .hover {
+                                                    display: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .Btn {
+                            display: none;
+                        }
+                    }
+                }
+            }
+    
+            &#shop {
+                .inner {
+                    h2 {
+                        font-size: 22px;
+                    }
+
+                    .shopSlideWrap {
+                        .shopSlide {
+                            white-space: initial;
+
+                            .list {
+                                right: 0;
+
+                                > li {
+                                    margin-top: 10px;
+                                    width: calc(100% / 3);
+                                    padding: 10px;
+                                    
+                                    > a {
+                                        height: 150px;
+                                    }
+
+                                    &:hover {
+                                        transform: translate(0);
+                                    }
+                                }
+                            }
+                        }
+
+                        .Btn {
+                            display: none;
+                        }
+                    }
+                }
+            }
+    
+            &#community {
+                .inner {
+                    h2 {
+                        font-size: 22px;
+                    }
+                    .question {
+                        .email {
+                            width: 100%;
+                            background: url(../img/sec04_backimg01.png) no-repeat center / cover;
+                            margin-bottom: 10px;
+
+                            h3 {
+                                font-size: 18px;
+                                padding-bottom: 10px;
+                            }
+
+                            > p {
+                                width: auto;
+                                font-size: 14px;
+                                padding-bottom: 0;
+
+                                .mobile {
+                                    display: none;
+                                }
+                            }
+                            
+                            .btn1 {
+                                display: none;
+                            }
+                        }
+
+                        .telephone {
+                            width: 100%;
+                            height: 120px;
+                            background: url(../img/sec04_backimg02.png) no-repeat center / cover;
+
+                            h3 {
+                                font-size: 18px;
+                                padding-bottom: 10px;
+                            }
+
+                            > a {
+                                font-size: 18px;
+                                padding-bottom: 10px;
+                            }
+
+                            > p {
+                                font-size: 14px;
+                                padding-bottom: 0;
+                            }
+
+                        }
+
+                        .faq {
+                            h3 {
+                                width: 65%;
+                                font-size: 18px;
+                                margin-bottom: 0;
+                            }
+
+                            .viewMore {
+                                font-size: 12px;
+                                width: 115px;
+                                line-height: 30px;
+                            }
+
+                            .qa {
+                                > li {
+                                    > a {
+                                        padding-right: 40px;
+
+                                        &::after {
+                                            width: 12px;
+                                            background: url(../img/m_link_arrow01.png) no-repeat center / contain;
+                                            background-color: #f9f9f9;
+                                            right: 20px;
+                                            transform: scale(1);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .report {
+                        article {
+                            display: block;
+                            width: 100%;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

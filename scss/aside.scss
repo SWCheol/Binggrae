@@ -1,13 +1,14 @@
 aside {
     position: fixed;
-    right: 10px;
-    bottom: 80px;
+    right: 20px;
+    bottom: 60px;
     letter-spacing: 0;
+    z-index: 10;
 
     span {
-        // position: absolute;
-        // bottom: 80px;
-        // right: 10px;
+        position: absolute;
+        bottom: 0px;
+        right: 10px;
 
         a {
             display: block;
