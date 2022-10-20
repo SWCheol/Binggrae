@@ -149,7 +149,7 @@
   letter-spacing: 0;
   transition: 0.5s;
 }
-#header .gnbWrapWrap .gnbWrap .gnb .depth01 .depth02 > li:hover > a {
+#header .gnbWrapWrap .gnbWrap .gnb .depth01 .depth02 > li:hover > a, #header .gnbWrapWrap .gnbWrap .gnb .depth01 .depth02 > li.hover > a {
   color: red;
 }
 #header .gnbWrapWrap .gnbWrap .gnb .depth01 .depth02 .depth03Ham {

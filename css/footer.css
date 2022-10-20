@@ -8,6 +8,8 @@ footer * {
   color: #fff;
 }
 footer .inner {
+  width: 100%;
+  max-width: 100%;
   position: relative;
 }
 footer .inner .personal {
@@ -30,23 +32,29 @@ footer .inner .addr > h1 > a {
   background: url(../img/f_logo.png) no-repeat;
 }
 footer .inner .addr .address {
-  margin-top: 30px;
-  margin-bottom: 115px;
+  padding-top: 30px;
+  padding-bottom: 115px;
   color: #a2a2a2;
   font-size: 17px;
   line-height: 2;
 }
-footer .inner .link {
-  position: absolute;
-  right: 0;
+footer .inner .bottom1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-footer .inner .link .sns {
+footer .inner .bottom1 .copyright {
+  color: #414141;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+footer .inner .bottom1 .link .sns {
   display: inline-block;
 }
-footer .inner .link .sns > li {
+footer .inner .bottom1 .link .sns > li {
   display: inline-block;
 }
-footer .inner .link .sns > li > a {
+footer .inner .bottom1 .link .sns > li > a {
   display: block;
   width: 70px;
   height: 70px;
@@ -55,18 +63,18 @@ footer .inner .link .sns > li > a {
   box-shadow: 1px 3px 5px 0px #000;
   margin-left: 15px;
 }
-footer .inner .link .sns > li:nth-of-type(1) > a {
+footer .inner .bottom1 .link .sns > li:nth-of-type(1) > a {
   background: url(../img/footer_sns01.png) no-repeat center;
 }
-footer .inner .link .sns > li:nth-of-type(2) > a {
+footer .inner .bottom1 .link .sns > li:nth-of-type(2) > a {
   background: url(../img/footer_sns02.png) no-repeat center;
 }
-footer .inner .link .sns > li:nth-of-type(3) > a {
+footer .inner .bottom1 .link .sns > li:nth-of-type(3) > a {
   background: url(../img/footer_sns03.png) no-repeat center;
 }
-footer .inner .link > a {
+footer .inner .bottom1 .link > a {
   display: inline-block;
-  width: 355px;
+  width: 255px;
   vertical-align: top;
   color: #6f6f6f;
   padding-left: 100px;
@@ -77,11 +85,11 @@ footer .inner .link > a {
   box-shadow: 1px 3px 5px 0px #000;
   margin-left: 60px;
 }
-footer .inner .link > a > strong {
+footer .inner .bottom1 .link > a > strong {
   color: #b3b3b3;
   font-weight: bold;
 }
-footer .inner .link > a::after {
+footer .inner .bottom1 .link > a::after {
   content: "▶";
   color: #fff;
   font-size: 10px;
@@ -89,19 +97,32 @@ footer .inner .link > a::after {
   position: relative;
   right: 40px;
 }
-footer .inner .copy {
+footer .inner .bottom2 {
+  display: none;
+  justify-content: space-between;
   line-height: 70px;
   letter-spacing: 0;
+  padding-top: 80px;
 }
-footer .inner .copy .right {
-  display: none;
+footer .inner .bottom2 .right {
   color: #767676;
   font-size: 12px;
 }
-footer .inner .copy .right > span {
+footer .inner .bottom2 .right > span {
   color: #767676;
+  padding-left: 25px;
+  position: relative;
 }
-footer .inner .copy .copyright {
+footer .inner .bottom2 .right > span::before {
+  content: "";
+  width: 1px;
+  height: 4px;
+  background: #767676;
+  position: absolute;
+  top: 7px;
+  left: 12px;
+}
+footer .inner .bottom2 .copyright {
   color: #414141;
   font-size: 14px;
 }
