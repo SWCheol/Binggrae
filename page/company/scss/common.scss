@@ -1,0 +1,130 @@
+#main {
+    width: 100%;
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 200px 20px 140px;
+    box-sizing: border-box;
+
+    .menu {
+        font-size: 0;
+        line-height: 35px;
+
+        > a {
+            font-size: 14px;
+        }
+
+        > span {
+            font-size: 16px;
+            padding: 0 10px;
+        }
+
+        > h3 {
+            font-size: 58px;
+            font-weight: bold;
+            line-height: 1;
+            margin: 15px 0 50px;
+        }
+    }
+
+    .nav {
+        overflow-y: auto;
+
+        > li {
+            display: inline-block;
+            margin-right: 10px;
+
+            > a {
+                display: block;
+                width: 180px;
+                padding: 0 20px;
+                background: rgba(0, 0, 0, 0.03);
+                text-align: center;
+                font-size: 16px;
+                line-height: 43px;
+                border-radius: 20px;
+                box-sizing: border-box;
+
+                &:hover, &.hover {
+                    color: #fff;
+                    background-color: #f00;
+                }
+            }
+        }
+    }
+
+    .title {
+        margin-top: 70px;
+        padding: 42px 0 36px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0px 3px 10px 0.9px rgb(0 0 0 / 3%);
+
+        .titleSub {
+            color: #f00;
+            line-height: 30px;
+            font-weight: bold;
+        }
+
+        .content {
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 30px;
+            margin-top: 12px;
+        }
+    }
+}
+
+
+#main {
+    @media screen and (max-width: 1280px) {
+        .menu {
+            > h3 {
+                font-size: 45px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        width: 95%;
+        padding: 120px 0 70px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 800px) {
+        .nav {
+            display: flex;
+            justify-content: center;
+
+            > li {
+                margin-right: 0;
+
+                > a {
+                    width: 150px;
+                    line-height: 35px;
+                    padding: 0 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .title {
+            margin-top: 40px;
+            padding: 40px 30px 20px;
+
+            .titleSub {
+                font-size: 14px;
+                line-height: 25px;
+            }
+
+            .content {
+                font-size: 16px;
+                line-height: 25px;
+                font-weight: normal;
+
+                > br {
+                    display: none;
+                }
+            }
+        }
+    }
+}

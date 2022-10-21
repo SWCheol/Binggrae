@@ -1,0 +1,715 @@
+#header {
+    width: 100%;
+    padding: 40px 80px;
+    margin-top: 31px;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+
+    &::after {
+        width: 100vw;
+        height: 1px;
+        background: #e7e7e7;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        clear: both;
+    }
+
+    &.white {
+        background: #fff;
+
+        &::after {
+            content: "";
+        }
+
+        .tnb {
+            background: #fff;
+        }
+    }
+
+    h1 {
+        float: left;
+        height: 35px;
+        position: relative;
+        z-index: 3;
+
+        > a {
+            span {
+                display: none;
+            }
+
+            .mobileLogo {
+                display: none;
+                width: 117px;
+                height: 27px;
+            }
+        }
+    }
+
+    .gnbWrapWrap {
+        .gnbMobileDark {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: 0.5s;
+        }
+    
+        .gnbWrap {
+            height: 0px;
+            position: absolute;
+            top: -31px;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+            box-shadow: 0px 2px 30px 2px rgba(0, 0, 0, 0.09);
+    
+            .mTnb {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 20px;
+                text-align: left;
+                border-bottom: 1px solid #e7e7e7;
+
+                > li {
+                    display: inline-block;
+
+                    > a {
+                        display: inline-block;
+                        font-size: 15px;
+                        padding: 10px 14px;
+                        background: #fff;
+                        border: 1px solid #e7e7e7;
+                        border-radius: 30px;
+
+                        > img {
+                            position: relative;
+                            top: 2px;
+                            margin-left: 5px;
+                        }
+                    }
+
+                    &:first-child {
+                        margin-right: 10px;
+                    }
+                }
+            }
+    
+            .gnb {
+                display: inline-block;
+                position: relative;
+                top: 31px;
+    
+                .depth01 {
+                    display: inline-block;
+                    padding-top: 45px;
+                    padding-right: 80px;
+                    position: relative;
+    
+                    > a {
+                        display: block;
+                        position: relative;
+                        line-height: 30px;
+                        font-size: 20px;
+                        padding-bottom: 40px;
+                        transition: 0.5s;
+    
+                        &:hover {
+                            color: red;
+    
+                            &::before {
+                                content: "";
+                                width: 5px;
+                                height: 5px;
+                                background: red;
+                                border-radius: 5px;
+                                position: absolute;
+                                top: 5px;
+                                right: -10px;
+                            }
+    
+                            &::after {
+                                content: "";
+                                width: 100%;
+                                height: 2px;
+                                background: red;
+                                position: absolute;
+                                top: calc(100% - 1px);
+                                left: 0;
+                                z-index: 1;
+                            }
+                        }
+                    }
+    
+                    .depth02 {
+                        display: none;
+                        width: 100%;
+                        padding-top: 20px;
+                        position: absolute;
+                        top: 116px;
+    
+                        > li {
+                            > a {
+                                display: block;
+                                text-align: left;
+                                font-size: 18px;
+                                line-height: 27px;
+                                padding: 7px 0;
+                                word-break: keep-all;
+                                letter-spacing: 0;
+                                transition: 0.5s;
+                            }
+    
+                            &:hover, &.hover {
+                                > a {
+                                    color: red;
+                                }
+                            }
+                        }
+    
+                        .depth03Ham {
+                            display: none;
+                            text-align: left;
+                            padding: 5px 0;
+    
+                            > li {
+                                > a {
+                                    display: block;
+                                    font-size: 15px;
+                                    line-height: 30px;
+                                    color: #343434cc;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .mEnb {
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 20px 20px 25px 38px;
+                background: #fff;
+
+                > li {
+                    display: inline-block;
+
+                    &:first-child {
+                        float: left;
+
+                        .lang {
+                            > li {
+                                display: inline-block;
+
+                                > a {
+                                    display: block;
+                                    line-height: 26px;
+                                }
+
+                                &:first-child {
+                                    margin-right: 20px;
+                                    position: relative;
+
+                                    &::after {
+                                        content: "";
+                                        width: 1px;
+                                        height: 12px;
+                                        background: #e7e7e7;
+                                        position: absolute;
+                                        top: 8px;
+                                        right: -11px;
+                                    }
+                                }
+
+                                &:last-child {
+                                    > a {
+                                        color: #ada9a9fa;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        float: right;
+
+                        > a {
+                            display: block;
+                            color: #343434cc;
+                            line-height: 26px;
+                        }
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+
+    .enb {
+        position: absolute;
+        right: 80px;
+        z-index: 10;
+
+        > li {
+            display: inline-block;
+            line-height: 35px;
+            width: 40px;
+
+            &:first-child {
+                margin-right: 34px;
+            }
+
+            > ul {
+                font-weight: bold;
+
+                .choice {
+                    cursor: pointer;
+
+                    > img {
+                        position: relative;
+                        top: -3px;
+                        margin-left: 10px;
+                    }
+                }
+
+                .language {
+                    width: 52px;
+                    height: 0;
+                    background: #fff;
+                    text-align: center;
+                    font-weight: bold;
+                    border-radius: 20px;
+                    position: absolute;
+                    overflow: hidden;
+                    transition: 0.5s;
+
+                    > li {
+                        a {
+                            display: block;
+                            line-height: 30px;
+                        }
+                    }
+
+                    &.active {
+                        height: 90px;
+                        padding: 10px 0;
+                    }
+                }
+            }
+
+            &:last-child {
+                width: 26px;
+            }
+
+            .hamburger {
+                position: relative;
+                top: 4px;
+                cursor: pointer;
+
+                > div {
+                    height: 2px;
+                    background: #000;
+                    transition: 0.5s;
+
+
+                    &:nth-of-type(2) {
+                        margin: 8px 0;
+                    }
+                }
+
+                &.active {
+                    > div {
+                        &:nth-of-type(1) {
+                            transform: translateY(10px) rotate(-45deg);
+                        }
+
+                        &:nth-of-type(2) {
+                            transform: rotate(45deg);
+                        }
+
+                        &:nth-of-type(3) {
+                            transform: rotate(45deg);
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tnb {
+        position: absolute;
+        top: -31px;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid #e7e7e7;
+        padding: 0 80px;
+        text-align: right;
+        
+        > ul {
+            > li {
+                display: inline-block;
+                position: relative;
+
+                &:first-child {
+                    margin-right: 20px;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 1px;
+                        height: 10px;
+                        background: #e7e7e7;
+                        position: absolute;
+                        top: 11px;
+                        right: -12px;
+                    }
+                }
+
+                a {
+                    display: block;
+                    font-size: 14px;
+                    line-height: 30px;
+
+                    img {
+                        position: relative;
+                        top: 1px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        background: #fff;
+
+        &::after {
+            content: "";
+        }
+
+        .gnbWrapWrap {
+            .gnbWrap {
+                animation: height 0.5s forwards;
+    
+                @keyframes height {
+                    from {
+                        height: 147px;
+                    }
+                    to {
+                        height: 575px;
+                    }
+                }
+    
+                .gnb {
+                    .depth01 {
+                        .depth02 {
+                            display: block;
+                            opacity: 0;
+                            animation: opacity 0.5s 0.5s forwards;
+    
+                            @keyframes opacity {
+                                from {
+                                    opacity: 0;
+                                }
+                                to {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.hamburgerGnb {
+        background: transparent;
+
+        &::after {
+            display: none;
+        }
+
+        .gnbWrapWrap {
+            .gnbWrap {
+                width: 100vw;
+                height: 100vh;
+                background: #fff;
+                border-radius: 0;
+                animation: opacity 0.5s forwards;
+    
+                @keyframes opacity{
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+    
+                .gnb {
+                    width: 1580px;
+                    position: absolute;
+                    top: 25%;
+                    left: 50%;
+                    transform: translate(-50%);
+    
+                    .depth01 {
+                        vertical-align: top;
+                        width: 255px;
+                        max-width: 14vw;
+                        height: 460px;
+                        padding: 50px 30px;
+                        border: 1px solid #e7e7e7;
+                        border-radius: 25px;
+                        margin-right: 10px;
+                        box-sizing: border-box;
+                        transition: 0.5s;
+
+                        > a {
+                            pointer-events: none;
+                        }
+    
+                        &:hover {
+                            transform: translateY(-10px);
+                            box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.1);
+    
+    
+                            > a {
+                                color: red;
+                            }
+                        }
+    
+    
+                        &:last-child {
+                            margin-right: 0;
+                        }
+    
+                        > a {
+                            text-align: left;
+                            font-size: 32px;
+                            font-weight: bold;
+    
+                            &::before {
+                                display: none;
+                            }
+    
+                            &::after {
+                                display: none;
+                            }
+                        }
+    
+                        .depth02 {
+                            display: block;
+                            padding-top: 0;
+                            position: relative;
+                            top: 0;
+    
+                            > .depth03Ham {
+                                padding: 0;
+                            }
+    
+                            > li {
+                                position: relative;
+    
+                                > a {
+                                    padding: 3px 0;
+                                }
+    
+                                &:hover {
+                                    > a {
+                                        &::after {
+                                            content: "↑";
+                                            color: red;
+                                            font-weight: bold;
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            transform: translateY(3px) rotate(45deg);
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .depth03Ham {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .tnb {
+            background: transparent;
+        }
+    }
+
+    &.mobile {        
+        .gnbWrapWrap {
+            .gnbMobileDark {
+                display: block;
+                opacity: 1;
+                z-index: 5;
+            }
+
+            .gnbWrap {
+                display: block;
+                height: 100vh;
+                top: 0;
+                border-radius: 30px 0 0 0px;
+                left: calc(100vw - 500px);
+                z-index: 7;
+                animation: opacity 0.5s forwards;
+    
+                @keyframes opacity{
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                .mobileWrap {
+                    height: calc(100% - 149px);
+                    position: relative;
+                    top: 78px;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+
+                    .gnb {
+                        width: 100%;
+                        top: 0px;
+                        padding: 11px 0 30px;
+    
+                        .depth01 {
+                            display: block;
+                            width: 100%;
+                            padding: 11px 20px 11px 38px;
+                            position: relative;
+                            text-align: left;
+                            box-sizing: border-box;
+                            cursor: pointer;
+    
+                            > a {
+                                padding: 0;
+                                font-size: 21px;
+                                font-weight: bold;
+                                line-height: 21px;
+                                pointer-events: none;
+    
+                                &::after {
+                                    content: "";
+                                    width: 10px;
+                                    height: 5px;
+                                    position: absolute;
+                                    top: 7px;
+                                    left: calc(100% - 20px + 10px);
+                                    right: 0;
+                                    background: url(../img/m_ham_menu_btn.png) no-repeat;
+                                    background-size: contain;
+                                }
+    
+                                &:hover {
+                                    color: #000;
+    
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            .depth02 {
+                                display: block;
+                                height: 0;
+                                padding: 0 20px 0 38px;
+                                position: relative;
+                                top: 11px;
+                                left: -38px;
+                                background: #e7e7e7;
+                                overflow: hidden;
+                            }
+    
+                            &.mobileActive {
+                                > a {
+                                    &::after {
+                                        transform: rotate(180deg);
+                                    }
+                                }
+    
+                                .depth02 {
+                                    height: auto;
+                                    padding-top: 11px;
+                                    padding-bottom: 11px;
+
+                                    > li {
+                                        transition: 0.5s;
+    
+                                        > a {
+                                            display: inline-block;
+                                            position: relative;
+                                            color: #343434cc;
+                                            line-height: 1;
+                                        }
+
+                                        &:hover {
+                                            > a {
+                                                color: red;
+
+                                                &::before {
+                                                    content: "";
+                                                    width: 3px;
+                                                    height: 3px;
+                                                    background: red;
+                                                    border-radius: 50%;
+                                                    position: absolute;
+                                                    top: 8px;
+                                                    right: -6px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .mEnb {
+                    display: block;
+                }
+    
+                .mTnb {
+                    display: block;
+                }
+            }
+        }
+
+        .enb {
+            > li {
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}

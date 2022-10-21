@@ -1,0 +1,346 @@
+#main {
+    .main {
+        padding-top: 100px;
+
+        > article {
+            padding: 0 30px 130px;
+
+            &.sec1 {
+                font-size: 0;
+                display: flex;
+
+                .item {
+                    width: 30%;
+                    margin: 0 1.5% 0;
+                    box-sizing: border-box;
+                    border: 1px solid #e7e7e7;
+                    border-radius: 20px;
+    
+                   > img {
+                        width: calc(100% - 20px);
+                        margin: 10px 10px 0;
+                   }
+    
+                   .textBox {
+                    padding: 22px 20px 17px;
+    
+                        > h5 {
+                            padding: 9px 0 5px;
+                            font-size: 25px;
+                            font-weight: bold;
+                            line-height: 30px;
+                        }
+    
+                        > p {
+                            margin-top: 8px;
+                            line-height: 25px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            &.sec2 {
+                > h2 {
+                    font-size: 32px;
+                    line-height: 30px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                .contBox {
+                    max-width: 1022px;
+                    padding: 58px;
+                    border: 1px solid #e7e7e7;
+                    border-radius: 20px;
+                    margin: 40px auto 0;
+                    box-sizing: border-box;
+
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .cont {
+                        width: calc(100% / 4);
+
+                        &:hover {
+                            .imgBox {
+                                background: #fff;
+                                box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.09);
+                            }
+                        }
+
+                        .imgBox {
+                            width: 182px;
+                            height: 182px;
+                            background-color: #f5f5f5;
+                            // background: url(../../../img/rule_ico01.png) no-repeat center center;
+                            border-radius: 20px;
+                            position: relative;
+                            margin: 0 auto;
+                            transition: 0.5s all;
+
+                            > img {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+
+                        > h5 {
+                            font-size: 21px;
+                            font-weight: bold;
+                            text-align: center;
+                            line-height: 30px;
+                            padding: 10px 0 5px;
+                        }
+
+                        > p {
+                            line-height: 1;
+                            text-align: center;
+                            word-break: keep-all;
+                            padding-bottom: 44px;
+                            font-size: 14px;
+                            letter-spacing: 0;
+                        }
+                    }
+                }
+            }
+
+            &.sec3 {
+                padding-bottom: 0;
+
+                > h2 {
+                    font-size: 32px;
+                    line-height: 30px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                .contBox {
+                    .textCard {
+                        max-width: 530px;
+                        text-align: center;
+                        padding: 31px 52px;
+                        background: #eef8fb;
+                        border-radius: 20px;
+                        box-sizing: border-box;
+                        margin: 30px auto;
+
+                        .text {
+                            font-size: 18px;
+                            padding-bottom: 10px;
+                        }
+
+                        .author {
+                            font-size: 15px;
+                            line-height: 21px;
+                        }
+                    }
+
+                    .boxBox{
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 5%;
+
+                        .leftBox, .rightBox {
+                            width: 100%;
+                            border-spacing: 20px;
+                            padding: 40px 30px;
+                            box-sizing: border-box;
+                            border-radius: 20px;
+                            box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.09);
+    
+                            > p {
+                                font-size: 18px;
+                                font-weight: lighter;
+                                line-height: 30px;
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#main {
+    @media screen and (max-width: 1280px) {
+        .main {
+            > article {
+                &.sec1 {
+                    .item {
+                        .textBox {
+                            > h5 {
+                                font-size: 20px;
+                            }
+
+                            > p {
+                                font-size: 14px;
+                                word-break: keep-all;
+                            }
+                        }
+                    }
+                }
+
+                &.sec2 {
+                    > h2 {
+                        font-size: 25px;
+                    }
+                    
+                    .contBox {
+                        .cont {
+                            .imgBox {
+                                width: 160px;
+                                height: 160px;
+
+                                > img {
+                                    transform: scale(0.9) translate(-55%, -55%);
+                                }
+                            }
+
+                            > h5 {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                &.sec3 {
+                    .contBox {
+                        .textCard {
+                            .text {
+                                font-size: 17px;
+                            }
+                        }
+
+                        .boxBox {
+                            flex-wrap: wrap;
+
+                            .leftBox, .rightBox {
+                                margin-bottom: 30px;
+
+                                > p {
+                                    font-size: 15px;
+                                    word-break: keep-all;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .main {
+            > article {
+                &.sec2 {
+                    .contBox {
+                        .cont {
+                            .imgBox {
+                                width: 140px;
+                                height: 140px;
+                                
+                                > img {
+                                    transform: scale(0.8) translate(-60%, -60%);
+                                }
+                            }
+
+                            > h5 {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+
+                &.sec3 {
+                    > h2 {
+                        font-size: 25px;
+                    }
+
+                    .contBox {
+                        .textCard {
+                            .text {
+                                padding: 14px;
+                            }
+                        }
+
+                        .boxBox {
+                            .leftBox, .rightBox {
+                                float: none;
+                                width: 100%;
+    
+                                > p {
+                                    font-size: 15px;
+    
+                                    br {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .main {
+            > article {
+                &.sec1 {
+                    display: block;
+
+                    .item {
+                        display: block;
+                        width: 95%;
+                        max-width: 421px;
+                        text-align: center;
+                        margin: 0 auto 30px;
+                        position: relative;
+                    }
+                }
+                &.sec2 {
+                    .contBox {
+                        padding: 58px 0;
+
+                        .cont {
+                            width: 50%;
+
+                            .imgBox {
+                                width: 182px;
+                                height: 182px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 487px) {
+        .main {
+            > article {
+                &.sec2 {
+                    .contBox {
+                        .cont {
+                            width: 100%;
+
+                            .imgBox {
+                                width: 182px;
+                                height: 182px;
+                            }
+
+                            > h5 {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

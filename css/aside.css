@@ -1,0 +1,39 @@
+aside {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  letter-spacing: 0;
+  z-index: 10;
+}
+aside span {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
+aside span a {
+  display: block;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 5;
+}
+aside span a:first-child {
+  color: black;
+  background: white;
+  box-shadow: 1px 1px 1px;
+}
+aside span a:last-child {
+  color: white;
+  background: black;
+  font-size: 22px;
+}
+@media screen and (max-width: 1024px) {
+  aside {
+    display: none;
+  }
+}

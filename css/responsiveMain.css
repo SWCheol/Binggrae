@@ -1,0 +1,239 @@
+@media screen and (max-width: 1400px) {
+  #main section#community .inner .question .email h3 {
+    font-size: 28px;
+  }
+  #main section#community .inner .question .email > p {
+    width: 155px;
+    font-size: 14px;
+    word-break: keep-all;
+  }
+  #main section#community .inner .question .telephone h3 {
+    font-size: 28px;
+  }
+  #main section#community .inner .question .telephone > a {
+    font-size: 38.5px;
+  }
+  #main section#community .inner .question .faq .qa > li > a {
+    font-size: 16px;
+    line-height: 65px;
+  }
+  #main section#community .inner .question .faq .qa > li > a::after {
+    width: 35px;
+    height: 35px;
+  }
+  #main section#community .inner .report article.cyber > p {
+    font-size: 16px;
+  }
+  #main section#community .inner .report article.sinmungo > p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #main section#title .titleInnerWrap .inner .search {
+    width: 90%;
+  }
+  #main section#title .titleInnerWrap .inner .search .searchBar .searchForm > input {
+    width: 76%;
+    line-height: 60px;
+  }
+  #main section#title .titleInnerWrap .inner .search .searchBar .searchForm > button {
+    line-height: 45px;
+  }
+  #main section#title .titleInnerWrap .inner .search .searchBar .searchForm::before {
+    top: 21px;
+  }
+  #main section#community .inner .question .faq .qa > li {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #main section#community .inner .question .email {
+    padding: 30px;
+    background: url(../img/sec04_backimg01.png) no-repeat center right 10%;
+  }
+  #main section#community .inner .question .email h3 {
+    padding-bottom: 20px;
+  }
+  #main section#community .inner .question .email > p {
+    line-height: 1.6;
+    padding-bottom: 20px;
+  }
+  #main section#community .inner .question .telephone {
+    height: 260px;
+    padding: 30px;
+    background: url(../img/sec04_backimg02.png) no-repeat center right 10%;
+  }
+  #main section#community .inner .question .telephone h3 {
+    padding-bottom: 20px;
+  }
+  #main section#community .inner .question .telephone > a {
+    padding-bottom: 15px;
+  }
+  #main section#community .inner .report article.cyber .btn1 {
+    margin: 50px auto 0;
+  }
+  #main section#community .inner .report article.sinmungo .btn1 {
+    margin: 50px auto 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main section {
+    padding-bottom: 60px;
+  }
+  #main section#title {
+    padding-bottom: 60px;
+  }
+  #main section#title .titleInnerWrap {
+    height: auto;
+  }
+  #main section#title .titleInnerWrap .inner > img {
+    padding-top: 150px;
+    padding-bottom: 10px;
+  }
+  #main section#title .titleInnerWrap .inner > img.pcImg {
+    display: none;
+  }
+  #main section#title .titleInnerWrap .inner > img.mobileImg {
+    display: block;
+  }
+  #main section#title .titleInnerWrap .inner .search .searchBar {
+    padding-left: 25px;
+  }
+  #main section#title .titleInnerWrap .inner .search .searchBar .searchForm > input {
+    width: 60%;
+    font-size: 12px;
+    line-height: 45px;
+  }
+  #main section#title .titleInnerWrap .inner .search .searchBar .searchForm > button {
+    width: 18%;
+    font-size: 10px;
+    line-height: 30px;
+  }
+  #main section#title .titleInnerWrap .inner .search .searchBar .searchForm::before {
+    top: 15px;
+  }
+  #main section#title .titleInnerWrap .inner .search .hashtag .hash > li {
+    margin-right: 7px;
+  }
+  #main section#title .titleInnerWrap .inner .search .hashtag .hash > li > a {
+    width: 70px;
+    font-size: 10px;
+    line-height: 30px;
+  }
+  #main section#taste .inner h2 {
+    font-size: 22px;
+  }
+  #main section#taste .inner .tasteSlideWrap .tasteSlide {
+    white-space: initial;
+  }
+  #main section#taste .inner .tasteSlideWrap .tasteSlide .list {
+    right: 0;
+  }
+  #main section#taste .inner .tasteSlideWrap .tasteSlide .list > li {
+    width: 33.3333333333%;
+    margin-top: 10px;
+  }
+  #main section#taste .inner .tasteSlideWrap .tasteSlide .list > li:hover {
+    transform: translate(0);
+  }
+  #main section#taste .inner .tasteSlideWrap .tasteSlide .list > li:hover > a .imgName {
+    background: #fff;
+  }
+  #main section#taste .inner .tasteSlideWrap .tasteSlide .list > li:hover > a .imgName .normal {
+    display: block;
+  }
+  #main section#taste .inner .tasteSlideWrap .tasteSlide .list > li:hover > a .imgName .hover {
+    display: none;
+  }
+  #main section#taste .inner .tasteSlideWrap .Btn {
+    display: none;
+  }
+  #main section#shop .inner h2 {
+    font-size: 22px;
+  }
+  #main section#shop .inner .shopSlideWrap .shopSlide {
+    white-space: initial;
+  }
+  #main section#shop .inner .shopSlideWrap .shopSlide .list {
+    right: 0;
+  }
+  #main section#shop .inner .shopSlideWrap .shopSlide .list > li {
+    margin-top: 10px;
+    width: 33.3333333333%;
+    padding: 10px;
+  }
+  #main section#shop .inner .shopSlideWrap .shopSlide .list > li > a {
+    height: 150px;
+  }
+  #main section#shop .inner .shopSlideWrap .shopSlide .list > li:hover {
+    transform: translate(0);
+  }
+  #main section#shop .inner .shopSlideWrap .Btn {
+    display: none;
+  }
+  #main section#community .inner h2 {
+    font-size: 22px;
+  }
+  #main section#community .inner .question .email {
+    width: 100%;
+    background: url(../img/sec04_backimg01.png) no-repeat center/cover;
+    margin-bottom: 10px;
+  }
+  #main section#community .inner .question .email h3 {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  #main section#community .inner .question .email > p {
+    width: auto;
+    font-size: 14px;
+    padding-bottom: 0;
+  }
+  #main section#community .inner .question .email > p .mobile {
+    display: none;
+  }
+  #main section#community .inner .question .email .btn1 {
+    display: none;
+  }
+  #main section#community .inner .question .telephone {
+    width: 100%;
+    height: 120px;
+    background: url(../img/sec04_backimg02.png) no-repeat center/cover;
+  }
+  #main section#community .inner .question .telephone h3 {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  #main section#community .inner .question .telephone > a {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  #main section#community .inner .question .telephone > p {
+    font-size: 14px;
+    padding-bottom: 0;
+  }
+  #main section#community .inner .question .faq h3 {
+    width: 65%;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  #main section#community .inner .question .faq .viewMore {
+    font-size: 12px;
+    width: 115px;
+    line-height: 30px;
+  }
+  #main section#community .inner .question .faq .qa > li > a {
+    padding-right: 40px;
+  }
+  #main section#community .inner .question .faq .qa > li > a::after {
+    width: 12px;
+    background: url(../img/m_link_arrow01.png) no-repeat center/contain;
+    background-color: #f9f9f9;
+    right: 20px;
+    transform: scale(1);
+  }
+  #main section#community .inner .report article {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
