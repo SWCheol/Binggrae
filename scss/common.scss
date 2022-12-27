@@ -1,47 +1,46 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Noto Sans KR', sans-serif;
-    letter-spacing: -1.5px;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -1.5px;
 
-    *::selection {
-        color: white;
-        background: black; 
-    }
+  *::selection {
+    color: white;
+    background: black;
+  }
 
-    &.hamburger {
-        overflow: hidden;
-    }
-
-    
-      
+  &.hamburger {
+    overflow: hidden;
+  }
 }
 
 .inner {
-    width: 95%;
-    max-width: 1310px;
-    margin: 0 auto;
+  width: 95%;
+  max-width: 1310px;
+  margin: 0 auto;
 }
 
-ul, form {
-	font-size: 0;
+ul,
+form {
+  font-size: 0;
 }
 
-input, button {
-    padding: 0;
+input,
+button {
+  padding: 0;
 }
 
 li {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .hideText {
-    display: none;
+  display: none;
 }
