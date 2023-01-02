@@ -17,8 +17,8 @@
 <br>
 <br>
 - PC(1280px~)
-    ![1](https://user-images.githubusercontent.com/110226523/209637203-aa4d5d5f-32b1-48ab-b27f-7a810b2dd921.PNG)
-    <br>
+  ![1](https://user-images.githubusercontent.com/110226523/209637203-aa4d5d5f-32b1-48ab-b27f-7a810b2dd921.PNG)
+  <br>
 
 - Tablet(768px ~ 1280px)
   ![2](https://user-images.githubusercontent.com/110226523/209634181-19296d29-b60e-40ff-9844-de9a9a07be0f.PNG)
@@ -43,6 +43,6 @@ sass scss/index.scss:scss/index.css --no-source-map -w
 
 ### function
 
-- 사이드 메뉴
-- 가로 슬라이드
-- 스크롤 탑
+- 사이드 햄버거 메뉴
+- pc버전 가로 슬라이드
+- 사이드바 스크롤 탑
