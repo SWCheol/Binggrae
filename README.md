@@ -1,4 +1,4 @@
-# 빙그레 반응형 사이트 클론 코딩
+# 빙그레 웹사이트
 
 #### https://swcheol.github.io/Binggrae/
 
@@ -31,7 +31,7 @@
 ### information
 
 - figma 디자인
-  https://www.figma.com/file/uQaHmemBPs86y2X2E8yo4g/Binggrae?node-id=0%3A1&t=f0NBny3MPSTl95d1-0
+  <div>https://www.figma.com/file/uQaHmemBPs86y2X2E8yo4g/Binggrae?node-id=0%3A1&t=f0NBny3MPSTl95d1-0</div>
 
 - scss 파일 전체가 css 파일 하나로 컴파일 되는 구조입니다.
 
@@ -40,6 +40,8 @@ sass scss/index.scss:scss/index.css --no-source-map -w
 ```
 
 - 브라우저 크롬에서 최적화 되었습니다.
+
+- 모바일, 태블릿, PC용 반응형입니다.
 
 ### function
 
